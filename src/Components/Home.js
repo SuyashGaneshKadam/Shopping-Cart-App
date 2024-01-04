@@ -7,11 +7,15 @@ import {
   clearCart,
 } from "../redux/features/shopSlice";
 import axios from "axios";
-import "./Home.css"
+import "./Home.css";
 
 const Home = () => {
   const list = useSelector((state) => state.shop.allItems);
   //   console.log(list);
+  //   const list1 = useSelector((state) => state.shop.cartItems);
+  //   console.log(list1);
+  // const amt = useSelector((state) => state.shop.totalAmount);
+  // console.log(amt);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,7 +40,14 @@ const Home = () => {
               <img className="card-img" src={item.thumbnail} alt="Item Image" />
               <p>Title: {item.title}</p>
               <p>Price: ${item.price}</p>
-              <button className="add-btn">Add to Cart</button>
+              <button
+                className="add-btn"
+                onClick={() => {
+                  dispatch(addItem({ id: item.id, price: item.price }));
+                }}
+              >
+                Add To Cart
+              </button>
             </div>
           ))}
       </div>
