@@ -1,0 +1,22 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#nav-right{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active{
+    color: tomato;
+}
