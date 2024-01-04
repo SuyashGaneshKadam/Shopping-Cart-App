@@ -1,6 +1,8 @@
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     background-color: black;
     color: white;
     padding: 20px;
@@ -15,6 +17,8 @@ a{
     width: 15%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .active{
